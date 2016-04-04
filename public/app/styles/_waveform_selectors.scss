@@ -1,0 +1,38 @@
+.waveform_selectors {
+	height: auto;
+	width: 100%;
+
+	.selector {
+		margin-bottom: 50px;
+		img {
+			display: block;
+			height: 150px;			
+			width: 150px;
+			margin: 0 auto;
+		}
+	}
+
+	h4 {
+		text-transform: uppercase;
+		color: $silver;
+	}
+
+	.edit_select {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 40px;
+		box-sizing: border-box;
+		header {
+			padding: 10px 0;
+			border-top: 2px solid $silver;
+			border-bottom: 2px solid $silver;
+			margin-bottom: 16px;
+		}
+
+		img {
+			height: 115px;
+			width: 115px;
+		}
+
+	}
+}

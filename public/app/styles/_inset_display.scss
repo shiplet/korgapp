@@ -1,0 +1,27 @@
+.inset_display {
+	background-color: $black;
+	height: 130px;
+	width: 292px;
+	margin: 36px auto 40px;
+	padding-top: 4px;
+	box-sizing: border-box;
+
+	.inset {
+		background-color: $inset;
+		height: 120px;
+		width: 233px;
+		margin: 0 auto;
+		padding-top: 15px;
+		box-sizing: border-box;
+
+		.display {
+			background-color: $red;
+			height: 91px;
+			width: 214px;
+			margin: 0 auto;
+			box-sizing: border-box;			
+		}		
+	}
+
+	
+}

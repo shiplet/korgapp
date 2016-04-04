@@ -1,0 +1,57 @@
+@import 'vars';
+@import 'inset_display';
+@import 'knob_row';
+@import 'waveform_settings';
+@import 'waveform_selectors';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+p, a, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Arial Black', 'Arial', 'Helvetica', sans-serif;
+}
+
+body {
+	background-color: $brown;
+}
+
+.header {
+	width: 100%;
+	height: 52px;
+	background-color: $gold;
+	margin-bottom: 3px;
+	.korg-logo {
+		height: 33px;
+		width: auto;
+		margin-left: 80px;
+		padding-top: 10px;
+	}
+}
+
+.silver-accent {
+	display: block;
+	height: 20px;
+	width: 100%;
+	background-color: $silver;
+}
+
+.left-column, .right-column {
+	float: left;
+}
+
+.left-column {
+	width: 31.553398058%;
+	height: 100%;
+}
+
+.right-column {
+	width: 68.446601942%;
+	height: 100%;
+}

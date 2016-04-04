@@ -13,16 +13,16 @@ gulp.task('lint', function() {
 
 /*
 	Leave this task uncommented for standard dev & production builds
-*/
-gulp.task('copy', function() {
-  return gulp.src(['app/js/plugins/ate.min.js'])
-        .pipe(gulp.dest('build/home/js/'));
-});
+// */
+// gulp.task('copy', function() {
+//   return gulp.src(['app/js/plugins/ate.min.js'])
+//         .pipe(gulp.dest('build/home/js/'));
+// });
 
-gulp.task('copyStratus', function(){
-	return gulp.src('app/js/plugins/stratus/**/*.*')
-		.pipe(gulp.dest('build/home/js/stratus'));
-})
+// gulp.task('copyStratus', function(){
+// 	return gulp.src('app/js/plugins/stratus/**/*.*')
+// 		.pipe(gulp.dest('build/home/js/stratus'));
+// })
 
 /*
 	Uncomment this task if running version checks
