@@ -2,8 +2,6 @@
 
 function GlobalCtrl($scope, $rootScope) {
 
-	$scope.test = "TEST";
-
 }
 
 export default {

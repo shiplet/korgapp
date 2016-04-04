@@ -10,23 +10,17 @@
 
 	<!-- HEADER -->
 	<div class="header">
-		<img class="korg-logo" src="images/korg_logo.svg"></div>
+		<div ng-if="!toggleNav">
+			<a ui-sref="admin"><img class="korg-logo" ng-src="images/korg_logo.svg"></a>
+		</div>
+		<div ng-else>
+			<a ui-sref="root"><img class="korg-logo" ng-src="images/korg_logo_red.svg"></a>
+		</div>
 	</div>
 	<div class="silver-accent"></div>
 
 
-	<!-- LEFT COLUMN -->
-	<div class="left-column">
-		<div ng-include="'components/inset_display.html'"></div>
-		<div ng-include="'components/waveform_selectors.html'"></div>
-	</div>
-
-
-	<!-- RIGHT COLUMN -->
-	<div class="right-column">
-		<div ng-include="'components/knob_row.html'"></div>
-		<div ui-view></div>
-	</div>
+	<div ui-view></div>
 
 
 	<script type="text/javascript" src="js/main.js"></script>

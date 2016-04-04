@@ -47,7 +47,7 @@ angular.element(document).ready(function()
 
 	angular.module('app').config(require('./on_config'));
 
-	// angular.module('app').run(require('./on_run'));
+	angular.module('app').run(require('./on_run'));
 
 	angular.bootstrap(document, ['app']);
 

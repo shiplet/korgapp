@@ -8,11 +8,17 @@ function OnConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 		.state('root', {
 			url: '/',
 			controller: 'WaveformCtrl',
-			templateUrl: 'components/waveform_settings.html'
-		});
+			templateUrl: 'main.html'
+		})
+		.state('admin', {
+			url: '/admin',
+			controller: 'AdminCtrl',
+			templateUrl: 'admin.html'
+		})
+		;
 
 
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('root');
 
 }
 
