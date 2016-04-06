@@ -29,6 +29,22 @@ body {
 	height: 52px;
 	background-color: $gold;
 	margin-bottom: 3px;
+
+	div {
+		display: inline-block;
+	}
+
+	.signOut {
+		margin-left: 30px;
+		color: $black;
+		display: inline-block;
+	}
+
+	.signOut:hover {
+		cursor: pointer;
+		color: lighten($black, 20%);
+	}
+
 	.korg-logo {
 		height: 33px;
 		width: auto;
