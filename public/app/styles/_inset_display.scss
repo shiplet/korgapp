@@ -2,7 +2,7 @@
 	background-color: $black;
 	height: 130px;
 	width: 292px;
-	margin: 36px auto 40px;
+	margin: 36px auto 0px;
 	padding-top: 4px;
 	box-sizing: border-box;
 
@@ -19,7 +19,20 @@
 			height: 91px;
 			width: 214px;
 			margin: 0 auto;
-			box-sizing: border-box;			
+			box-sizing: border-box;
+			font-family: 'DS-Digital-Normal';
+			color: $LCDred;
+			overflow-x: visible;
+
+			span {
+				font-size: 8em;
+				line-height: 0.75em;				
+			}
+
+			span.instrument {
+				letter-spacing: 20px;
+				margin-left: 6.5420560748%;
+			}
 		}		
 	}
 

@@ -1,8 +1,9 @@
 'use strict';
 
-function OnConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+function OnConfig($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
 	$locationProvider.html5Mode(true);
+	$httpProvider.defaults.headers.post = {'Content-Type': 'application/x-www-form-url-encoded'};
 
 	$stateProvider
 		.state('root', {
@@ -13,7 +14,16 @@ function OnConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 		.state('admin', {
 			url: '/admin',
 			controller: 'AdminCtrl',
-			templateUrl: 'admin.html'
+		})
+		.state('adminLogin', {
+			url: '/login',
+			controller: 'LoginCtrl',
+			templateUrl: 'adminLogin.html'
+		})
+		.state('adminSubmit', {
+			url: '/submit',
+			controller: 'SubmitCtrl',
+			templateUrl: 'adminSubmit.html'
 		})
 		;
 

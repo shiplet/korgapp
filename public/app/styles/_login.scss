@@ -1,0 +1,76 @@
+.login {
+	height: auto;
+	width: 500px;
+	padding-bottom: 30px;
+	background-color: $black;
+	border: 2px solid $gold;
+	margin: 20vh auto 0;
+
+	header {
+		color: $gold;
+		padding-left: 20px;
+		padding-top: 10px;
+	}
+
+	.alert {
+		float: right;
+		width: 70%;
+		padding-top: 37px;
+		text-align: center;
+		p {
+			font-size: .65em;
+			color: $silver;
+		}
+	}
+
+	.no-visibility {
+		display: none;
+	}
+
+	.adminLogin {
+		padding-left: 20px;
+		padding-right: 40px;
+	}
+
+	.userLogin {
+		border: none;
+		border-bottom: 1px solid $gold;
+		background-color: $black;
+		display: block;
+		width: 100%;
+		margin-top: 33px;
+		color: $silver;
+		font-family: 'Arial Black', 'Arial', 'Helvetica', sans-serif;
+		font-size: 1.5em;
+		padding-left: 20px;
+		padding-bottom: 5px;
+	}
+
+	.userLogin:focus {
+		outline: none;
+	}
+
+	.submitLogin {
+		border: 2px solid $silver;
+		background-color: $black;
+		font-family: 'Arial Black', 'Arial', 'Helvetica', sans-serif;
+		color: $silver;
+		padding: 6px 12px;
+		margin-top: 30px;
+		margin-left: 20px;
+	}
+
+	.submitLogin:hover {
+		background-color: lighten($black, 10%);
+		cursor: pointer;
+	}
+
+	.submitLogin:active, .submitLogin:focus {
+		outline: none;	
+	}
+
+	.submitLogin:active {
+		color: $gold;
+	}
+
+}

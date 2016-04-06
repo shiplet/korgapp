@@ -1,17 +1,22 @@
 'use strict';
 
 
-function OnRun($rootScope, $state) {
+function OnRun($rootScope, $state, User) {
 
 	$rootScope.toggleNav = false;
+	$rootScope.$on('$stateChangeSuccess', handleStateChange);
 
-	$rootScope.$on('$stateChangeSuccess', handleStateChangeSuccess);
+	function handleStateChange(event, toState, toParams, fromState, fromParams) {
 
-	function handleStateChangeSuccess(event, toState, toParams, fromState, fromParams, options) {
-		if(toState.name === 'admin') {
-			$rootScope.toggleNav = true;
-		} else {
-			$rootScope.toggleNav = false;
+		if($state.$current.name.indexOf('admin') > -1) $rootScope.toggleNav = true;
+		else $rootScope.toggleNav = false;
+
+		if(toState.name.indexOf('admin') > -1){
+			if(!User.getUser()) {
+				$state.go('adminLogin');
+			} else {
+				$state.go('adminSubmit');
+			}			
 		}
 	}
 
