@@ -5,10 +5,15 @@
 @import 'waveform_settings';
 @import 'waveform_selectors';
 @import 'login';
+@import 'admin_submit';
 
 * {
 	margin: 0;
 	padding: 0;
+}
+
+:focus, :active {
+	outline: none;
 }
 
 html, body {
@@ -16,7 +21,7 @@ html, body {
 	width: 100%;
 }
 
-p, a, h1, h2, h3, h4, h5, h6 {
+p, a, h1, h2, h3, h4, h5, h6, label {
 	font-family: 'Arial Black', 'Arial', 'Helvetica', sans-serif;
 }
 

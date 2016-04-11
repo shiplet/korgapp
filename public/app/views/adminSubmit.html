@@ -1,1 +1,76 @@
-<h1>Admin</h1>
+<div class="adminSubmit">
+	<h2 class="title">Submit a Waveform</h2>
+	<form name="waveformItem">
+
+		<!-- Waveform ID -->
+		<div class="formSegment">
+
+			<div class="formItem">
+				<h4 class="segmentTitle">Waveform ID</h4>
+				<input type="text" title="waveform ID" ng-model="waveform.ID" class="formInput">
+			</div>
+
+			<div class="spacer"></div>
+
+			<div class="formItem">			
+				<h4 class="segmentTitle">Edit Select</h4>
+				<input id="edit-select-1" type="radio" ng-model="waveform.edit_select" value="1" class="formRadio" title="edit select 1" ng-change="trackInput()">
+				<label class="edit-select" for="edit-select-1">1</label>
+				<input id="edit-select-2" type="radio" ng-model="waveform.edit_select" value="2" class="formRadio" title="edit select 2" ng-change="trackInput()">
+				<label class="edit-select" for="edit-select-2">2</label>
+			</div>
+
+		</div>
+
+		<!-- Edit Select 1 -->
+		<div ng-show="waveform.edit_select == '1'">
+			<div class="formSegment" ng-repeat="(key, value) in EditSelect_1">
+				<h4 class="segmentTitle">{{key.toUpperCase()}}</h4>
+				<div class="formRow">
+					<div ng-repeat="item in EditSelect_1[key]">
+						<div ng-if="item.type == 'text'">
+							<input class="formInput formField" type="text" ng-model="waveform.EditSelect_1[key][item.name]" placeholder="{{item.label}} [{{item.values}}]" ng-change="trackInput()">
+						</div>
+						<div ng-else-if="item.type == 'dropdown'">
+							<select class="formSelect formField" ng-model="waveform.EditSelect_1[key][item.name]" ng-change="trackInput()">
+								<option value="" selected>-- {{item.label.toUpperCase()}} --</option>
+								<option ng-repeat="subitem in item.values" value="{{subitem}}">{{subitem}}</option>
+							</select>
+						</div>
+						<div ng-else-if="!item.label">
+							<div class="noValue formField">						
+								<img src="images/knob_transparent.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Edit Select 2 -->
+		<div ng-show="waveform.edit_select == '2'">
+			<div class="formSegment" ng-repeat="(key, value) in EditSelect_2">
+				<h4 class="segmentTitle">{{key.toUpperCase()}}</h4>
+				<div class="formRow">
+					<div ng-repeat="item in EditSelect_2[key]">
+						<div ng-if="item.type == 'text'">
+							<input class="formInput formField" type="text" ng-model="waveform.EditSelect_2[key][item.name]" placeholder="{{item.label}} [{{item.values}}]" ng-change="trackInput()">
+						</div>
+						<div ng-else-if="item.type == 'dropdown'">
+							<select class="formSelect formField" ng-model="waveform.EditSelect_2[key][item.name]" ng-change="trackInput()">
+								<option value="" selected>-- {{item.label.toUpperCase()}} --</option>
+								<option ng-repeat="subitem in item.values" value="{{subitem}}">{{subitem}}</option>
+							</select>
+						</div>
+						<div ng-else-if="!item.label">
+							<div class="noValue formField">
+								<img src="images/knob_transparent.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="submitWaveform" ng-click="testWaveform()">Submit</button>
+	</form>
+</div>

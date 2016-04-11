@@ -1,0 +1,100 @@
+.adminSubmit {
+	width: 80%;
+	height: auto;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: $black;
+	border: 2px solid $gold;	
+
+	h2, h4, label {
+		color: $gold;
+		display: inline-block;
+	}
+
+	h4 {
+		margin-right: 5%;
+	}
+
+	.title {
+		margin-bottom: 20px;
+	}
+
+	.formSegment {
+		padding: 20px 0;
+		border-top: 1px solid rgba($gold, 0.4);
+		position: relative;
+		overflow: auto;
+	}
+
+	.segmentTitle {
+		text-transform: uppercase;
+		color: $silver;
+		margin-bottom: 15px;
+	}
+
+
+	.formItem {
+		margin-bottom: 30px;
+	}
+
+	.formField {
+		float: left;
+		margin-left: 5.5%;
+	}	
+
+	.formInput {
+		box-sizing: border-box;
+		border: none;
+		border-bottom: 1px solid $gold;
+		background-color: $black;
+		display: inline-block;
+		color: $LCDred;
+		font-family: 'DS-Digital-Normal';
+		font-size: 1.5em;
+		padding-left: 20px;
+	}
+
+	.formField.formInput {
+		width: 14.5%;
+		font-size: 16px;
+		padding-left: 0;
+		text-align: center;
+	}
+
+	.formRadio {
+		margin-left: 30px;
+	}
+
+	.formSelect {
+		border: 0;
+		border-radius: 0;
+		width: 12%;
+		display: inline-block;
+		width: 14.499776119%;
+	}
+
+	.edit-select {
+		position: relative;
+		top: -20px;
+		left: -15px;
+	}
+
+	.noValue {
+		width: 14.499776119%;
+		text-align: center;
+		img {
+			width: 50px;
+		}
+	}
+
+	.submitWaveform {
+		border: 2px solid $silver;
+		background-color: $black;
+		font-family: 'Arial Black', 'Arial', 'Helvetica', sans-serif;
+		color: $silver;
+		padding: 6px 12px;
+		margin-top: 30px;
+		margin-left: 20px;
+	}
+
+}

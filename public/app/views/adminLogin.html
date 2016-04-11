@@ -2,7 +2,7 @@
 	<header><h3>Please login to access this page</h3></header>
 	<form name="adminLogin" class="adminLogin">
 		<input class="userLogin" type="text" ng-model="user.username" title="username" placeholder="username" autofocus/>
-		<input class="userLogin" type="password" ng-model="user.password" title="password" placeholder="password"/>
+		<input class="userLogin" type="password" ng-model="user.password" title="password" placeholder="password" ng-change="resetAlert()"/>
 		<div class="alert"><p ng-bind="alert"></p></div>
 		<button type="submit" class="submitLogin" ng-click="submitLogin()">Submit</button>
 	</form>

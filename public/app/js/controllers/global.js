@@ -1,12 +1,16 @@
 'use strict';
 
-function GlobalCtrl($scope, $rootScope, $state, User) {
+function GlobalCtrl($rootScope, $scope, $state, User) {
+
+	function init() {
+		User.getUser();
+	}
 
 	$scope.logOut = function() {
-		User.setUser({});
-		$rootScope.signOut = false;
-		$state.go('root');
+		User.logout();
 	};
+
+	$rootScope.$on('$stateChangeSuccess', init);
 
 }
 

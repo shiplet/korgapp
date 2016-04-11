@@ -13,11 +13,9 @@ function OnRun($rootScope, $state, User) {
 
 		if(toState.name.indexOf('admin') > -1){
 			if(!User.getUser()) {
-				$rootScope.signOut = false;
 				$state.go('adminLogin');
 			} else {
 				$state.go('adminSubmit');
-				$rootScope.signOut = true;
 			}			
 		}
 	}
