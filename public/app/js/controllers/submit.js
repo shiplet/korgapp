@@ -9,11 +9,11 @@ function SubmitCtrl($rootScope, $scope, $window, FormModules) {
 		if($window.sessionStorage.waveform) {
 			$scope.waveform = JSON.parse($window.sessionStorage.waveform);
 		}
-		
+
 	}
 
 	$scope.testWaveform = function() {
-
+		console.log($scope.waveform);
 	};
 
 

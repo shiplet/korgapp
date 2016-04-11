@@ -29,10 +29,10 @@
 				<div class="formRow">
 					<div ng-repeat="item in EditSelect_1[key]">
 						<div ng-if="item.type == 'text'">
-							<input class="formInput formField" type="text" ng-model="waveform.EditSelect_1[key][item.name]" placeholder="{{item.label}} [{{item.values}}]" ng-change="trackInput()">
+							<input class="formInput formField" type="text" ng-model="waveform.EditSelect_1[key][item.name]" placeholder="{{item.label}} [{{item.values}}]" ng-change="trackInput()" title="{{item.label}}">
 						</div>
 						<div ng-else-if="item.type == 'dropdown'">
-							<select class="formSelect formField" ng-model="waveform.EditSelect_1[key][item.name]" ng-change="trackInput()">
+							<select class="formSelect formField" ng-model="waveform.EditSelect_1[key][item.name]" ng-change="trackInput()" title="{{item.label}}">
 								<option value="" selected>-- {{item.label.toUpperCase()}} --</option>
 								<option ng-repeat="subitem in item.values" value="{{subitem}}">{{subitem}}</option>
 							</select>
@@ -54,10 +54,10 @@
 				<div class="formRow">
 					<div ng-repeat="item in EditSelect_2[key]">
 						<div ng-if="item.type == 'text'">
-							<input class="formInput formField" type="text" ng-model="waveform.EditSelect_2[key][item.name]" placeholder="{{item.label}} [{{item.values}}]" ng-change="trackInput()">
+							<input class="formInput formField" type="text" ng-model="waveform.EditSelect_2[key][item.name]" placeholder="{{item.label}} [{{item.values}}]" ng-change="trackInput()" title="{{item.label}}">
 						</div>
 						<div ng-else-if="item.type == 'dropdown'">
-							<select class="formSelect formField" ng-model="waveform.EditSelect_2[key][item.name]" ng-change="trackInput()">
+							<select class="formSelect formField" ng-model="waveform.EditSelect_2[key][item.name]" ng-change="trackInput()" title="{{item.label}}">
 								<option value="" selected>-- {{item.label.toUpperCase()}} --</option>
 								<option ng-repeat="subitem in item.values" value="{{subitem}}">{{subitem}}</option>
 							</select>
