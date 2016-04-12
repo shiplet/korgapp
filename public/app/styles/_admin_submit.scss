@@ -16,7 +16,14 @@
 	}
 
 	.title {
+		display: block;
 		margin-bottom: 20px;
+	}
+
+	.resetButton {
+		float: right;
+		color: $silver;
+		cursor: pointer;
 	}
 
 	.formSegment {

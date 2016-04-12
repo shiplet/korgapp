@@ -8,19 +8,27 @@ function SubmitCtrl($rootScope, $scope, $window, FormModules) {
 
 		if($window.sessionStorage.waveform) {
 			$scope.waveform = JSON.parse($window.sessionStorage.waveform);
+			$scope.edit = JSON.parse($window.sessionStorage.edit);
 		}
 
 	}
 
-	$scope.testWaveform = function() {
+
+	$scope.submitWaveform = function() {
 		console.log($scope.waveform);
+	};
+
+
+	$scope.resetWaveform = function()	{
+		
 	};
 
 
 	$scope.trackInput = function() {
 		$window.sessionStorage.waveform = JSON.stringify($scope.waveform);
+		$window.sessionStorage.edit = JSON.stringify($scope.edit);
 	};
-
+	
 
 	$scope.$on('$stateChangeSuccess', init);
 
