@@ -20,7 +20,7 @@ function SubmitCtrl($rootScope, $scope, $window, FormModules) {
 
 
 	$scope.resetWaveform = function()	{
-		
+		$scope.waveform = {};
 	};
 
 
@@ -28,7 +28,7 @@ function SubmitCtrl($rootScope, $scope, $window, FormModules) {
 		$window.sessionStorage.waveform = JSON.stringify($scope.waveform);
 		$window.sessionStorage.edit = JSON.stringify($scope.edit);
 	};
-	
+
 
 	$scope.$on('$stateChangeSuccess', init);
 
