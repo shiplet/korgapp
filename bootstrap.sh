@@ -1,14 +1,11 @@
 #! /usr/bin/env bash
 
-apt-add-repository ppa:ondrej/apache2
-apt-add-repository ppa:ondrej/php5
-apt-get -y update
-apt-get -y upgrade
-apt-get -y dist-upgrade
-apt-get install -y apache2
-apt-get install -y php5
-apt-get install -y nginx
-apt-get install -y emacs24
+sudo apt-add-repository ppa:ondrej/apache2
+sudo apt-add-repository ppa:ondrej/php5
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade
+sudo apt-get install -y apache2 php5 nginx emacs24 python-dev python-pip
 if ! [ -L /var/www ]; then
     rm -rv /var/www
     ln -fs /vagrant /var/www

@@ -23,7 +23,7 @@ headers = {
 
 def application(environ, start_response):
 
-    post_env = environ.copy()   
+    post_env = environ.copy()
     endpoint = isEndpoint(post_env)
 
     if(post_env['REQUEST_METHOD'] == 'OPTIONS'):
@@ -42,7 +42,6 @@ def application(environ, start_response):
     else:
         start_response('404 NOT FOUND', headers['default'])
         return ['No response recorded']
-
 
 def isEndpoint(environ):
     path = environ['PATH_INFO'].split('/')[1]

@@ -11,6 +11,8 @@ sys.stdout = sys.stderr
 
 logging.basicConfig(filename='/tmp/python.log', level=logging.DEBUG, stream=sys.stderr)
 
+saltHold = '3CHhpXJC0XqGPh1MK'
+
 class REST:
 
     def __init__(self, environ):

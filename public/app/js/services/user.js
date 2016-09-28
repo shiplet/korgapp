@@ -31,7 +31,7 @@ const User = function($rootScope, $http, $q, $state, $timeout, $window) {
 			password: user.password
 		};
 
-		$http.post('http://localhost:8080/login', urlParams).then(function(res){
+		$http.post('http://localhost:8000/login', urlParams).then(function(res){
 			if(res.data.status === '200') {
 				$rootScope.alert = "";
 				self.setUser(res.data);
