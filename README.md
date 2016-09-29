@@ -36,6 +36,7 @@ curl -o vagrant.dmg https://releases.hashicorp.com/vagrant/1.8.6/vagrant_1.8.6.d
 
 Open the downloaded file `vagrant.dmg`, and go through the OSX install process.
 After Vagrant installs, `cd` into the project directory and boot Vagrant.
+It may ask you to install a VirtualMachine software. I use [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
 ```
 $ cd korgapp
@@ -117,7 +118,7 @@ Vagrant cannot forward the specified ports on this VM ...
 Run the following commands to debug:
 
 ```
-vagrant global-status
+$ vagrant global-status
 ```
 
 If there are any VMs listed as using this project's directory, you'll get an output like
@@ -125,14 +126,36 @@ If there are any VMs listed as using this project's directory, you'll get an out
 ```
 id       name    provider   state   directory
 ------------------------------------------------------------------------
-3e89c24  default virtualbox running /Users/shiplet/Sites/korgapp
+3e89c24  default virtualbox running /path/to/korgapp
 ```
 
 Use the `id` that appears, in this case `3e89c24`, and run
 
 ```
-vagrant destroy 3e89c24
+$ vagrant destroy 3e89c24
 ```
+
+If after destroying the box, the `vagrant up` command throws the same error, run the command
+
+```
+$ lsof -i tcp:8000
+```
+
+You should see an output like
+
+```
+COMMAND     PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+VBoxHeadl 21342    user   18u  IPv4 0xa5e9569cab2f579f      0t0  TCP *:irdmi (LISTEN)
+```
+
+In this case, grab the number under `PID` and run
+
+```
+$ sudo kill 21342
+```
+
+If **that** doesn't work, run for the hills.
+
 
 # Project Tech
 This project is built using:
