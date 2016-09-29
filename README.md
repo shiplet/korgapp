@@ -93,7 +93,14 @@ This will install all necessary `npm` packages and dependencies. Upon a successf
 automatically launch your system's default web browser. You should see the KorgApp UI.
 
 To test communication between the server and client, click the KORG logo in the top left, and enter `test` for both
-username and password. This user was ceated as part of the `MongoDB` build process. The script is located in `korgapp/korg/mongo_init.js`.
+username and password. 
+
+```
+username: test
+password: test
+```
+
+This user was ceated as part of the `MongoDB` build process. The script is located in `korgapp/korg/mongo_init.js`.
 
 If the login is successful, the client redirects to the `Add a Waveform` view.
 
