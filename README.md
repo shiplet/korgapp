@@ -1,5 +1,5 @@
 # Getting Started
-=================
+-----------------
 
 After cloning the repo, if you don't already have it, install Vagrant.
 Vagrant creates virtual environments directly on your machine,
