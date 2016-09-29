@@ -1,8 +1,6 @@
 # Getting Started
 
-### Short Version
-=================
-
+## Short Version
 Install Vagrant
 
 ```
@@ -19,9 +17,7 @@ $ cd public
 $ npm install && gulp dev
 ```
 
-### Long Version
-================
-
+## Long Version
 Clone the repo, and install Vagrant.
 
 Vagrant creates virtual environments directly on your machine,
