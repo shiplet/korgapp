@@ -42,6 +42,10 @@ $ cd korgapp
 $ vagrant up
 ```
 
+If this is your first time building the app, this part will take a super long time
+because it has to download the Ubuntu 14.04 Trusty Tahr kernel. It might be a good
+time to make lunch or go for a walk or browse Reddit.
+
 A successful build will show
 
 ```
