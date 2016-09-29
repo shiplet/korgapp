@@ -10,14 +10,13 @@ curl -o vagrant.dmg https://releases.hashicorp.com/vagrant/1.8.6/vagrant_1.8.6.d
 ```
 
 Open the downloaded file `vagrant.dmg`, and go through the OSX install procedures.
-After Vagrant installs, cd into the project directory and boot Vagrant.
+After Vagrant installs, `cd` into the project directory and boot Vagrant.
 
 ```
 $ cd korgapp
 $ vagrant up
 ```
 
-This process will likely take several minutes, depending on your connection speed.
 A successful build will show
 
 ```
@@ -34,10 +33,11 @@ A successful build will show
 ==> default: connecting to: 127.0.0.1/korg
 ```
 
-as the last 11 lines of console output. These signify, in order, that:
+as the last 11 lines of console output (this could take several minutes depending on connection speed). 
+These signify, in order, that:
 * both `uwsgi` and `pymongo` successfully installed
 * the `korgapp` has registered to run when the virtual environment boots
-* the `vagrant 	9632` process is the first of 5 system processes dedicated serving the app
+* the `vagrant 	9632 ...` process is the first of 5 system processes dedicated serving the app
 * `nginx` successfully tested all config files
 * `nginx` successfully restarted
 * `MongoDB` successfully started and connected to `127.0.0.1/korg`
