@@ -89,7 +89,7 @@ $ cd public
 $ npm install && gulp dev
 ```
 
-This will install all necessary `npm` packages and dependencies and upon a successful build, `browser-sync` will
+This will install all necessary `npm` packages and dependencies. Upon a successful build, `browser-sync` will
 automatically launch your system's default web browser. You should see the KorgApp UI.
 
 To test communication between the server and client, click the KORG logo in the top left, and enter `test` for both
