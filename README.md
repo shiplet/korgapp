@@ -104,6 +104,8 @@ That's it! Happy devving!
 # Project Tech
 This project is built using:
 
+* Ubuntu 14.04
+* Vagrant
 * Angular 1.5.8
 * Python2
 * uWSGI
