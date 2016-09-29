@@ -17,6 +17,9 @@ $ cd public
 $ npm install && gulp dev
 ```
 
+Successful server build: `http://localhost:8000` will show `No Response Recorded`
+Successful client build: `browser-sync` will auto-launch the app
+
 
 ## Quick Start (explained)
 Clone the repo, and install Vagrant.
