@@ -154,7 +154,7 @@ In this case, grab the number under `PID` and run
 $ sudo kill 21342
 ```
 
-If **that** doesn't work, run for the hills.
+Run `vagrant up` again. If it **still** doesn't work, run for the hills.
 
 
 # Project Tech
