@@ -9,7 +9,7 @@ which makes it a lot easier to simulate live and production servers.
 
 After Vagrant installs, cd into the project directory and boot Vagrant.
 
-```cd korgapp
+`cd korgapp`
 
-vagrant up```
+`vagrant up`
 
