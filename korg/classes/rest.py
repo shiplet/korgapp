@@ -5,7 +5,7 @@ from bson import Binary, Code
 from bson.json_util import dumps, loads
 import urlparse
 import hashlib
-from post import Post
+# from post import Post
 
 sys.stdout = sys.stderr
 

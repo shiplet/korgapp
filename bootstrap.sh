@@ -5,7 +5,7 @@ sudo apt-add-repository ppa:ondrej/php5
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
-sudo apt-get install -y apache2 php5 nginx emacs24 python-dev python-pip mongodb
+sudo apt-get install -y apache2 php5 nginx-full emacs24 python-dev python-pip mongodb
 if ! [ -L /var/www ]; then
     rm -rv /var/www
     ln -fs /vagrant /var/www
@@ -15,7 +15,7 @@ sudo pip install virtualenv
 
 cd /var/www/korg/
 . korgappenv/bin/activate
-sudo pip install uwsgi
+sudo pip install uwsgi pymongo
 deactivate
 
 touch /etc/init/korgapp.conf
@@ -40,8 +40,8 @@ echo "server {" >> /etc/nginx/sites-available/korgapp.conf
 echo "	listen 8080;" >> /etc/nginx/sites-available/korgapp.conf
 echo "	server_name 0.0.0.0;" >> /etc/nginx/sites-available/korgapp.conf
 echo "	location / {" >> /etc/nginx/sites-available/korgapp.conf
-echo "		include 	uswgi_params;" >> /etc/nginx/sites-available/korgapp.conf
-echo "		uwsgi_pass 	unix:/tmp/korgapp.sock" >> /etc/nginx/sites-available/korgapp.conf
+echo "		include 	uwsgi_params;" >> /etc/nginx/sites-available/korgapp.conf
+echo "		uwsgi_pass 	unix:/tmp/korgapp.sock;" >> /etc/nginx/sites-available/korgapp.conf
 echo "	}" >> /etc/nginx/sites-available/korgapp.conf
 echo "}" >> /etc/nginx/sites-available/korgapp.conf
 
@@ -50,3 +50,5 @@ sudo ln -s /etc/nginx/sites-available/korgapp.conf /etc/nginx/sites-enabled/
 sudo service nginx configtest
 
 sudo service nginx restart
+
+sudo mongo 127.0.0.1/korg /var/www/korg/mongo_init.js
