@@ -108,6 +108,32 @@ That's it! Happy devving!
 
 (p.s. - I still need to put together a todo list, will have that up before long)
 
+## Debugging Server Build
+If Vagrant throws an error like:
+```
+Vagrant cannot forward the specified ports on this VM ...
+```
+
+Run the following commands to debug:
+
+```
+vagrant global-status
+```
+
+If there are any VMs listed as using this project's directory, you'll get an output like
+
+```
+id       name    provider   state   directory
+------------------------------------------------------------------------
+3e89c24  default virtualbox running /Users/shiplet/Sites/korgapp
+```
+
+Use the `id` that appears, in this case `3e89c24`, and run
+
+```
+vagrant destroy 3e89c24
+```
+
 # Project Tech
 This project is built using:
 
