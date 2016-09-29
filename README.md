@@ -1,6 +1,7 @@
 # Getting Started
 
 ### Short Version
+=================
 
 Install Vagrant
 
@@ -19,6 +20,7 @@ $ npm install && gulp dev
 ```
 
 ### Long Version
+================
 
 Clone the repo, and install Vagrant.
 
