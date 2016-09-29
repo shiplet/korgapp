@@ -33,4 +33,12 @@ A successful build will show
 ==> default: connecting to: 127.0.0.1/korg
 ```
 
-as the last 10 lines of console output.
+as the last 11 lines of console output. These signify, in order, that:
+* both `uwsgi` and `pymongo` successfully installed
+* the `korgapp` has registered to run when the virtual environment boots
+* the `vagrant 	9632` process is the first of 5 system processes dedicated serving the app
+* `nginx` successfully tested all config files
+* `nginx` successfully restarted
+* `MongoDB` successfully started and connected to `127.0.0.1/korg`
+
+
