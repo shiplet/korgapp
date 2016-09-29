@@ -23,6 +23,8 @@ Successful client build: `browser-sync` will auto-launch the app
 
 
 ## Quick Start (explained)
+
+#### Build the Server
 Clone the repo, and install Vagrant.
 
 Vagrant creates virtual environments directly on your machine,
@@ -65,4 +67,40 @@ These signify, in order, that:
 * `nginx` successfully restarted
 * `MongoDB` successfully started and connected to `127.0.0.1/korg`
 
+From here, verify a successful server build by visiting `http://localhost:8000`.
 
+You should see
+
+```
+No Response Recorded
+```
+
+as the sole HTML output. If so, your server is up and running.
+
+#### Build the Client
+To build the client
+
+```
+$ cd public
+$ npm install && gulp dev
+```
+
+This will install all necessary `npm` packages and dependencies and upon a successful build, `browser-sync` will
+automatically launch your system's default web browser. You should see the KorgApp UI.
+
+To test communication between the server and client, click the KORG logo in the top left, and enter `test` for both
+username and password. This user was ceated as part of the `MongoDB` build process. The script is located in `korgapp/korg/mongo_init.js`.
+
+If the login is successful, the client redirects to the `Add a Waveform` view.
+
+That's it! Happy devving!
+
+(p.s. - I still need to put together a todo list, will have that up before long)
+
+# Project Tech
+This project is built using:
+
+* Angular 1.5.8
+* Python2
+* uWSGI
+* nginx
