@@ -5,11 +5,32 @@ Clone the repo, and install Vagrant.
 Vagrant creates virtual environments directly on your machine,
 which makes it a lot easier to simulate live and production servers.
 
-`curl -o vagrant.dmg https://releases.hashicorp.com/vagrant/1.8.6/vagrant_1.8.6.dmg`
+```
+curl -o vagrant.dmg https://releases.hashicorp.com/vagrant/1.8.6/vagrant_1.8.6.dmg
+```
 
 After Vagrant installs, cd into the project directory and boot Vagrant.
 
-`cd korgapp`
+```
+$ cd korgapp
+$ vagrant up
+```
 
-`vagrant up`
+This process will likely take several minutes, depending on your connection speed.
+A successful build will show
 
+```
+==> default: Successfully installed uwsgi pymongo
+==> default: Cleaning up...
+==> default: korgapp start/running, process 9627
+==> default: root      9631  0.0  0.1  10460   916 ?        S    16:24   0:00 grep korgapp
+==> default: vagrant   9632  0.0  1.0  35240  5324 ?        R    16:24   0:00 uwsgi --ini korgapp.ini
+==> default:  * Testing nginx configuration
+==> default:    ...done.
+==> default:  * Restarting nginx nginx
+==> default:    ...done.
+==> default: MongoDB shell version: 2.4.9
+==> default: connecting to: 127.0.0.1/korg
+```
+
+as the last 10 lines of console output.
