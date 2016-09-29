@@ -1,5 +1,25 @@
 # Getting Started
 
+### Short Version
+
+Install Vagrant
+
+```
+$ curl -o vagrant.dmg https://releases.hashicorp.com/vagrant/1.8.6/vagrant_1.8.6.dmg
+```
+
+Build app:
+
+```
+$ git clone git@github.com:shiplet/korgapp.git
+$ cd korgapp
+$ vagrant up
+$ cd public
+$ npm install && gulp dev
+```
+
+### Long Version
+
 Clone the repo, and install Vagrant.
 
 Vagrant creates virtual environments directly on your machine,
@@ -9,7 +29,7 @@ which makes it a lot easier to simulate live and production servers.
 curl -o vagrant.dmg https://releases.hashicorp.com/vagrant/1.8.6/vagrant_1.8.6.dmg
 ```
 
-Open the downloaded file `vagrant.dmg`, and go through the OSX install procedures.
+Open the downloaded file `vagrant.dmg`, and go through the OSX install process.
 After Vagrant installs, `cd` into the project directory and boot Vagrant.
 
 ```
